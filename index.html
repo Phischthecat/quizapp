@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./quizfragen.js"></script>
     <script src="./script.js"></script>
     <!-- Bootstrap Files -->
     <link
@@ -21,46 +22,136 @@
     ></script>
   </head>
   <body onload="init()">
-    <nav class="navbar bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Quizapp</a>
-      </div>
-    </nav>
+    <div class="progress">
+      <div
+        class="progress-bar progress-bar-striped progress-bar-animated"
+        role="progressbar"
+        style="width: 0%"
+        id="progress"
+      ></div>
+    </div>
     <div class="container">
       <div class="card quiz-card">
-        <div class="card-body" id="endscreen" style="display: none">
-          Quiz gewonnen!
-        </div>
-
-        <div class="card-body" id="questionBody">
-          <h5 class="card-title" id="question">Frage</h5>
-          <div class="card mb-2 quiz-answer-card" onclick="answer('answer_1')">
-            <div class="card-body" id="answer_1">Antwort</div>
-          </div>
-          <div class="card mb-2 quiz-answer-card" onclick="answer('answer_2')">
-            <div class="card-body" id="answer_2">Antwort</div>
-          </div>
-          <div class="card mb-2 quiz-answer-card" onclick="answer('answer_3')">
-            <div class="card-body" id="answer_3">Antwort</div>
-          </div>
-          <div class="card mb-2 quiz-answer-card" onclick="answer('answer_4')">
-            <div class="card-body" id="answer_4">Antwort</div>
-          </div>
-
-          <div class="question-footer">
-            <span
-              ><b id="currentQuestion" 2>1</b> von
-              <b id="all-questions"></b> Fragen</span
+        <div class="content">
+          <nav class="nav flex-column bg-blue">
+            <a
+              class="navbar-brand m-3 p-1 d-flex justify-content-center logo"
+              href="#"
             >
+              <img src="./img/logo 2.png" alt="" />
+            </a>
 
-            <button
-              id="nextBtn"
-              type="button"
-              class="btn btn-primary"
-              onclick="nextQuestion()"
+            <a
+              onclick="activeHTML(questions_html)"
+              id="html"
+              class="nav-link active text-white"
+              aria-current="page"
+              href="#"
             >
-              Nächste Frage
-            </button>
+              HTML</a
+            >
+            <a
+              onclick="activeHandball(questions_handball)"
+              id="handball"
+              class="nav-link text-white"
+              href="#"
+              >Handball</a
+            >
+            <a
+              onclick="activeAllgemein(questions_allgemein)"
+              id="allgemein"
+              class="nav-link text-white"
+              href="#"
+              >Allgemeinwissen</a
+            >
+          </nav>
+          <div class="card-body" id="endscreen" style="display: none">
+            <div class="bg-circle">
+              <img src="./img/Group 5.png" alt="" />
+              <div class="text-center">Complete HTML Quiz</div>
+              <div class="text-center score">
+                <div class="blue">Your Score</div>
+                <div>
+                  <strong id="all-right-questions">xx</strong> /
+                  <strong id="all-questions-endscreen">xx</strong>
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-lg share"
+                data-bs-toggle="popover"
+                title="Construction!"
+                data-bs-content="Hier entstehen noch Verlinkungen zu den gängisten Social Media Plattformen"
+              >
+                Share
+              </button>
+              <!-- <button class="btn btn-primary share text-center">Share</button> -->
+              <button onclick="replay()" class="btn replay text-center">
+                Replay
+              </button>
+            </div>
+          </div>
+
+          <div class="card-body" id="questionBody">
+            <h5 class="card-title text-center" id="question">Frage</h5>
+            <div
+              class="card mb-2 quiz-answer-card"
+              onclick="answer('answer_1')"
+            >
+              <div class="answer-container">
+                <strong id="strong-answer_1" class="answer m-2">A</strong>
+                <div class="card-body" id="answer_1">Antwort</div>
+              </div>
+            </div>
+            <div
+              class="card mb-2 quiz-answer-card"
+              onclick="answer('answer_2')"
+            >
+              <div class="answer-container">
+                <strong id="strong-answer_2" class="answer m-2 text-center"
+                  >B</strong
+                >
+                <div class="card-body" id="answer_2">Antwort</div>
+              </div>
+            </div>
+            <div
+              class="card mb-2 quiz-answer-card"
+              onclick="answer('answer_3')"
+            >
+              <div class="answer-container">
+                <strong id="strong-answer_3" class="answer m-2 text-center"
+                  >C</strong
+                >
+                <div class="card-body" id="answer_3">Antwort</div>
+              </div>
+            </div>
+            <div
+              class="card mb-2 quiz-answer-card"
+              onclick="answer('answer_4')"
+            >
+              <div class="answer-container">
+                <strong id="strong-answer_4" class="answer m-2 text-center"
+                  >D</strong
+                >
+                <div class="card-body" id="answer_4">Antwort</div>
+              </div>
+            </div>
+
+            <div class="question-footer">
+              <span
+                ><b id="currentQuestion" 2>1</b> von
+                <b id="all-questions"></b> Fragen</span
+              >
+
+              <button
+                id="nextBtn"
+                type="button"
+                class="btn btn-primary"
+                onclick="nextQuestion()"
+              >
+                Nächste Frage
+              </button>
+            </div>
           </div>
         </div>
       </div>

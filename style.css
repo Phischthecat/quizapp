@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Rubik:wght@400;500;700&display=swap');
+
 :root {
   --bg-color: #f4edff;
+  --blue: #173de8;
+  --bg-blue: #3d5ded;
+  --orange: #ff4e0f;
+  --light-orange: #f7d5bb;
+  --white: #fff;
+  --red: #f81818;
+  --bg-red: #ffa4a4;
+  --green: #4bc117;
+  --bg-green: #b7f799;
+  --grey: #d6d6d6;
+  --bg-grey: #f7f7f7;
 }
 
 * {
@@ -10,6 +23,12 @@
 
 body {
   background-color: var(--bg-color) !important;
+  font-family: 'Rubik', sans-serif;
+  /* font-family: 'PT Sans', sans-serif; */
+}
+
+.progress {
+  border-radius: 0 !important;
 }
 
 .container {
@@ -17,11 +36,11 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color) !important;
-  min-height: 100vh;
+  height: calc(100vh - 16px);
 }
 
 .quiz-card {
-  width: 30rem;
+  width: 40rem;
 }
 
 .question-footer {
@@ -40,4 +59,103 @@ body {
 .bg-success,
 .bg-danger {
   color: white;
+}
+
+.bg-circle {
+  background-color: var(--light-orange);
+  border-radius: 100%;
+  height: 450px;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+
+  text-transform: uppercase;
+}
+
+.bg-circle img {
+  height: 150px;
+}
+.content {
+  display: flex;
+  width: 40rem !important;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.share {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+  border: none !important;
+}
+
+.replay {
+  color: var(--orange) !important;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.logo img {
+  height: 100%;
+  margin: auto;
+}
+
+.answer-container {
+  display: flex;
+  align-items: center;
+}
+
+.answer {
+  padding: 5px 10px;
+  background-color: var(--grey);
+}
+
+.right-answer-card {
+  background-color: var(--bg-green);
+}
+
+.right-answer {
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.wrong-answer-card {
+  background-color: var(--bg-red);
+}
+
+.wrong-answer {
+  color: var(--white);
+  background-color: var(--red);
+}
+
+.active {
+  background-color: var(--bg-blue);
+}
+
+h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
 }
