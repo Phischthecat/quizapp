@@ -131,7 +131,7 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75px;
+  min-height: 75px;
 }
 
 .overlay {
@@ -188,8 +188,12 @@ h5 {
   color: var(--orange) !important;
 }
 
-@media screen and (max-width: 490px) {
-  nav {
-    display: none !important;
+@media screen and (max-width: 575px) {
+  .content {
+    display: block;
+  }
+
+  .logo img {
+    height: 65px;
   }
 }

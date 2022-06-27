@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quizapp</title>
+    <link rel="shortcut icon" href="./img/logo 2.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="./quizfragen.js"></script>
     <script src="./script.js"></script>
@@ -35,43 +36,46 @@
       <div class="card quiz-card">
         <div class="content">
           <!--Navigation-->
-          <nav class="nav flex-column bg-blue">
+          <nav
+            class="nav flex-sm-column flex-row justify-content-sm-start align-items-sm-start align-items-center justify-content-center bg-blue"
+          >
             <a
               class="navbar-brand m-3 p-1 d-flex justify-content-center logo"
               href="#"
             >
               <img src="./img/logo 2.png" alt="" />
             </a>
-
-            <a
-              onclick="activeHTML(questions_html)"
-              id="html"
-              class="nav-link active text-white"
-              aria-current="page"
-              href="#"
-            >
-              HTML</a
-            >
-            <a
-              onclick="activeHandball(questions_handball)"
-              id="handball"
-              class="nav-link text-white"
-              href="#"
-              >Handball</a
-            >
-            <a
-              onclick="activeAllgemein(questions_allgemein)"
-              id="allgemein"
-              class="nav-link text-white"
-              href="#"
-              >Allgemeinwissen</a
-            >
+            <div>
+              <a
+                onclick="activeHTML(questions_html)"
+                id="html"
+                class="nav-link w-100 d-flex justify-content-center justify-content-sm-start active text-white"
+                aria-current="page"
+                href="#"
+              >
+                HTML</a
+              >
+              <a
+                onclick="activeHandball(questions_handball)"
+                id="handball"
+                class="nav-link w-100 d-flex justify-content-center justify-content-sm-start text-white"
+                href="#"
+                >Handball</a
+              >
+              <a
+                onclick="activeAllgemein(questions_allgemein)"
+                id="allgemein"
+                class="nav-link w-100 d-flex justify-content-center justify-content-sm-start text-white"
+                href="#"
+                >Allgemeinwissen</a
+              >
+            </div>
           </nav>
           <!--Endscreen-->
           <div class="px-2 py-4 card-body" id="endscreen" style="display: none">
             <div class="p-3 bg-circle">
               <img class="m-2 img-fluid" src="./img/Group 5.png" alt="" />
-              <div class="m-2 text-center">Complete HTML Quiz</div>
+              <div class="m-2 text-center">Complete the Quiz</div>
               <div class="m-2 text-center score">
                 <div class="blue">Your Score</div>
                 <div>
@@ -83,12 +87,12 @@
                 type="button"
                 class="btn btn-lg share"
                 data-bs-toggle="popover"
+                data-bs-trigger="focus"
                 title="Construction!"
                 data-bs-content="Hier entstehen noch Verlinkungen zu den gängisten Social Media Plattformen"
               >
                 Share
               </button>
-              <!-- <button class="btn btn-primary share text-center">Share</button> -->
               <button onclick="replay()" class="btn replay text-center">
                 Replay
               </button>

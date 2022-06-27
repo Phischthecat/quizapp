@@ -1,10 +1,35 @@
 let questions_html = [
   {
-    question: 'Wer hat HMTL erfunden?',
-    answer_1: 'Robbie Williams',
-    answer_2: 'Lady Gaga',
-    answer_3: 'Tim Berners-Lee',
-    answer_4: 'Justin Bieber',
+    question: 'Für was steht die Abkürzung HTML?',
+    answer_1: 'Home Tool Markup Language',
+    answer_2: 'Hyperlinks and Text Markup Language',
+    answer_3: 'Hyper Text Markup Language',
+    answer_4: 'Help To Markup Language',
+    right_answer: 3,
+  },
+  {
+    question: 'Wähle das korrekte HTML Element für die größte Überschrift',
+    answer_1: '&lt;h1&gt;',
+    answer_2: '&lt;h6&gt;',
+    answer_3: '&lt;head&gt;',
+    answer_4: '&lt;heading&gt;',
+    right_answer: 1,
+  },
+  {
+    question: 'Was ist das korrekte HTML Element für einen Zeilenumbruch',
+    answer_1: '&lt;lb&gt;',
+    answer_2: '&lt;hr&gt;',
+    answer_3: '&lt;break&gt;',
+    answer_4: '&lt;br&gt;',
+    right_answer: 4,
+  },
+  {
+    question:
+      'Wie ist die korrekte HTML Schreibweise für das Hinzufügen einer Hintergrundfarbe?',
+    answer_1: '&lt;body bg="yellow"&gt;',
+    answer_2: '&lt;background&gt;yellow&lt;&sol;background&gt;',
+    answer_3: '&lt;body style="background-color: yellow;"&gt;',
+    answer_4: '&lt;head style="background-color: yellow;"&gt;',
     right_answer: 3,
   },
   {
@@ -49,18 +74,19 @@ let questions_html = [
     right_answer: 1,
   },
   {
-    question: 'Wie definiert man in Javascript eine Variable?',
-    answer_1: 'let 100 = rate;',
-    answer_2: '100 = let rate',
-    answer_3: 'rate = 100',
-    answer_4: 'let rate = 100',
+    question: 'Wer legt den Webstandards fest?',
+    answer_1: 'Mozilla',
+    answer_2: 'Microsoft',
+    answer_3: 'Google',
+    answer_4: 'World Wide Web Consortium',
     right_answer: 4,
   },
 ];
 
 let questions_handball = [
   {
-    question: 'Wie viele Spieler hat jede Mannschaft inklusive Torwart?',
+    question:
+      'Wie viele Spieler hat jede Mannschaft inklusive Torwart auf dem Feld?',
     answer_1: '14',
     answer_2: '7',
     answer_3: '11',
@@ -102,16 +128,16 @@ let questions_handball = [
   },
   {
     question:
-      'Wenn Torwart A einen Ball abwehrt, aber dieser anschließend ins Aus rollt, gibt es...',
-    answer_1: '...Einwurf für Mannschaft A',
-    answer_2: '...Einwurf für Mannschaft B',
+      'Wenn Torwart A einen Ball abwehrt, aber dieser anschließend ins Seiten-Aus rollt, gibt es ____',
+    answer_1: 'Einwurf für Mannschaft A',
+    answer_2: 'Einwurf für Mannschaft B',
     answer_3: 'Ballbesitz für den Torwart A',
     answer_4: 'Nichts',
     right_answer: 2,
   },
   {
     question:
-      'Was passiert, wenn Spieler A Spieler B den Ball aus der Hand schlägt, ohne ihn dabei zu berühren?',
+      'Was passiert, wenn Spieler A Spieler B den Ball aus der Hand schlägt, ohne den Spieler dabei zu berühren?',
     answer_1: 'Freistoß für Spieler A',
     answer_2: 'Freistoß für Spieler B',
     answer_3: 'Nichts',
