@@ -130,8 +130,8 @@ function wrongAnswer(selection, idOfRightAnswer) {
 }
 
 function showEndscreen() {
-  document.getElementById('endscreen').style = '';
-  document.getElementById('questionBody').style = 'display: none';
+  addStyle('endscreen', '');
+  addStyle('questionBody', 'display: none');
   document.getElementById('all-questions-endscreen').innerHTML =
     selectedQuiz.length;
   document.getElementById('all-right-questions').innerHTML = rightQuestions;
@@ -140,7 +140,7 @@ function showEndscreen() {
 }
 
 function percent() {
-  let percent = (currentQuestion / selectedQuiz.length) * 100;
+  let percent = ((currentQuestion + 1) / selectedQuiz.length) * 100;
 
   document.getElementById('progress').style = `width: ${percent}%`;
 }
